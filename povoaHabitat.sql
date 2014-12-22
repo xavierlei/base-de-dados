@@ -82,3 +82,36 @@ insert into doadores (nome,NIF,rua,Localidade,codPostal,contacto,dataAssociacao,
 	values("Construtora Enterra", "9187345212","rua do lado","Braga","4400-123","253900876",'2005-11-03',"obras","enterra@email.pt","www.enterra.pt","Bob Construtor",null);
     insert into doadores (nome,NIF,rua,Localidade,codPostal,contacto,dataAssociacao,actividade,email,site,pessoaDeContacto,voluntario)
 	values("Rui Martelo","9834372920","rua não existe","Barcelos","4750-500","9112343212",'2002-12-21',null,"MM@email.com",null,null,null);
+    
+-- tarefas
+insert into Tarefas (descricao)
+	values("alicerços");
+insert into Tarefas (descricao)
+	values("colocação de brita");
+insert into Tarefas (descricao)
+	values("limpeza de terreno");
+insert into Tarefas (descricao)
+	values("levantamento de paredes");
+insert into Tarefas (descricao)
+	values("colocação de telhado");
+insert into Tarefas (descricao)
+	values("instalação electrica");
+insert into Tarefas (descricao)
+	values("pintura exterior");
+insert into Tarefas (descricao)
+	values("pintura interior");
+insert into Tarefas (descricao)
+	values("colocação de janelas");
+insert into Tarefas (descricao)
+	values("colocação de portas");
+insert into Tarefas (descricao)
+	values("canalizações");
+insert into Tarefas (descricao)
+	values("colocação de mobília");
+insert into Tarefas (descricao)
+	values("colocação de mobiliario de casa de banho");
+insert into Tarefas (descricao)
+	values("inspeção geral");
+insert into Tarefas (descricao)
+	values("plantar relvado");
+
