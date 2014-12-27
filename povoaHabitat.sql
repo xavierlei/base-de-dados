@@ -132,5 +132,33 @@ insert into Perguntas (descricao,estado)
 	values("Qual a escolaridade média do agregado familiar?","activa");
 insert into Perguntas (descricao,estado)
 	values("Qual a disponibilidade horaria para os elementos do agregado trabalharem na obra?","activa");
+    
+-- doadores
 
+insert into Doadores (nome,NIF,rua,Localidade,codPostal,contacto,dataAssociacao,actividade,
+					  email)
+			values("João Rico","123456","Rua de Barros","Gualtar","4710-058",
+            "910000000","2013-12-12","particular","rico@email.pt");
+            
+-- doacoes
+insert into Doacoes(descricao,data,tipo,quantidade,unidade,doador)
+	values("cimento","2013-12-12","material",2000,"kg",1);
+insert into Doacoes(descricao,data,tipo,quantidade,unidade,doador)
+	values("tijolos","2013-12-12","material",5000,"unidade",1);
+insert into Doacoes(descricao,data,tipo,quantidade,unidade,doador)
+	values("areia","2013-12-12","material",1000,"kg",1);
+insert into Doacoes(descricao,data,tipo,quantidade,unidade,doador)
+	values("cerveja cristal","2013-12-12","material",1000,"litros",1);
+insert into Doacoes(descricao,data,tipo,valor,doador,evento)
+	values("dinheiro","2013-12-12","monetario",1200,1,1);
+insert into Doacoes(descricao,data,tipo,valor,doador,evento)
+	values("dinheiro","2013-12-12","monetario",1.90,1,1);
+-- eventos
+insert into Habitat.Eventos (data,nrParticipantes,observacoes,funcionario, valorAngariado)
+	values("2013-12-12",123,"observado","julianaJ",0);
+    
+select * from doacoes;
+
+select * from Material;
+select * from Eventos;
 
