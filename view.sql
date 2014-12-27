@@ -81,7 +81,7 @@ create view vw_candidatura as
 select * from vw_candidatura where id=1;
 
 
-drop view if exists ProjetoTarefasEventosDoacaoes;
+drop view if exists vw_ProjetoTarefasEventosDoacaoes;
 
 create view vw_ProjetoTarefasEventosDoacaoes as
 	select p.id,count(pt.tarefas) "Total de tarefas Realizadas",
@@ -97,4 +97,4 @@ create view vw_ProjetoTarefasEventosDoacaoes as
 					on p.id = d.projecto;
 		
         
-select * from ProjetoTarefasEventosDoacaoes where id=1;
+select * from vw_ProjetoTarefasEventosDoacaoes where id=1;
