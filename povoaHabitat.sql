@@ -155,10 +155,10 @@ insert into Doacoes(descricao,data,tipo,quantidade,unidade,doador)
 	values("cerveja cristal","2013-12-12","material",1000,"litros",1);
 insert into Doacoes(descricao,data,tipo,valor,doador,evento)
 	values("dinheiro","2013-12-12","monetario",1200,1,1);
-insert into Doacoes(descricao,data,tipo,valor,doador,evento)
-	values("dinheiro","2013-12-12","monetario",1.90,1,1);
+insert into Doacoes(descricao,data,tipo,valor,doador)
+	values("dinheiro","2013-02-01","monetario",90000,1);
 
-    
+update Doacoes set evento = 1 where id = 7;
 select * from doacoes;
 
 select * from Material;

@@ -40,3 +40,17 @@ create trigger tg_Doacao
 		 end if;
 end$$
 
+drop trigger if exists tg_updateDoacao;
+delimiter $$
+create trigger tg_updateDoacao
+	after update on Habitat.Doacoes
+    for each row
+    begin
+		 if new.tipo = "monetário" then
+			if old.evento is null then
+				if new.evento is not null then
+					call sp_actualizaAngariacao(new.evento, new.valor);
+				end if;
+			end if;
+		 end if;
+end$$
