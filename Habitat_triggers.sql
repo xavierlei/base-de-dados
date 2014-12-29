@@ -4,7 +4,6 @@ create procedure sp_actualizaMaterial(in matDescricao varchar(75), in quant int,
 begin
 declare idMat int;
 declare erro bool default 0;
-declare continue handler for sqlexception set Erro = '1';
 		select id into idMat from Habitat.Material where Material.descricao = matDescricao
 					group by id;
 		if idMat is null then
