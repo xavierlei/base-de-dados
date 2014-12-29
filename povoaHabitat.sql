@@ -56,20 +56,20 @@ insert into Candidaturas (dataAbertura,dataDecisao,observacoes,estado,funcionari
 	values('2014-11-19',null,"família com dívidas","pendente","xavier",3);
 
 -- Voluntarios
-insert into Voluntarios (nome, dataAssociacao,tipo,contacto,dataNascimento,profissao,rua,localidade,codPostal,nomeEquipa)
-	values("Marco Marcos",'2002-12-21',"obras","MM@email.com",'1990-10-02',"estudante","rua ficticia","Barcelos","4750-500","equipa cenas");
-insert into Voluntarios (nome, dataAssociacao,tipo,contacto,dataNascimento,profissao,rua,localidade,codPostal,nomeEquipa)
-	values("Johny Bravo",'1990-09-21',"obras","JB@email.com",'1990-10-02',"professor","rua da imaginação","Barcelos","4750-123","equipa cenas");
-insert into Voluntarios (nome, dataAssociacao,tipo,contacto,dataNascimento,profissao,rua,localidade,codPostal,nomeEquipa)
-	values("João Homem",'2009-02-04',"familias","JH@email.com",'1980-10-02',"empresario","rua de cima","Braga","4750-200","equipa cenas");
-insert into Voluntarios (nome, dataAssociacao,tipo,contacto,dataNascimento,profissao,rua,localidade,codPostal,nomeEquipa)
-	values("Cookie Monster",'2010-12-21',"angariação","CM@email.com",'1969-10-02',"monstro","rua Sésamo","Lisboa","4000-500","equipa cenas");
-insert into Voluntarios (nome, dataAssociacao,tipo,contacto,dataNascimento,profissao,rua,localidade,codPostal,nomeEquipa)
-	values("Michael Knight",'2012-12-21',"obras","MK@email.com",'1945-10-02',"justiceiro","rua cenas","Porto","4300-500","equipa cenas");
-insert into Voluntarios (nome, dataAssociacao,tipo,contacto,dataNascimento,profissao,rua,localidade,codPostal,nomeEquipa)
-	values("Mário Anónimo",'2011-10-21',"obras","MA@email.com",'1978-10-02',"engenheiro civil","rua rua","Bragança","4330-500","equipa cenas");
-insert into Voluntarios (nome, dataAssociacao,tipo,contacto,dataNascimento,profissao,rua,localidade,codPostal,nomeEquipa)
-	values("José Cid",'2003-04-01',"obras","JC@email.com",'1947-06-02',"artista","rua da Cabana Junta á Praia","Lisboa","4000-510","equipa cenas");
+insert into Voluntarios (nome, dataAssociacao,contacto,dataNascimento,profissao,rua,localidade,codPostal,nomeEquipa)
+	values("Marco Marcos",'2002-12-21',"MM@email.com",'1990-10-02',"estudante","rua ficticia","Barcelos","4750-500","equipa cenas");
+insert into Voluntarios (nome, dataAssociacao,contacto,dataNascimento,profissao,rua,localidade,codPostal,nomeEquipa)
+	values("Johny Bravo",'1990-09-21',"JB@email.com",'1990-10-02',"professor","rua da imaginação","Barcelos","4750-123","equipa cenas");
+insert into Voluntarios (nome, dataAssociacao,contacto,dataNascimento,profissao,rua,localidade,codPostal,nomeEquipa)
+	values("João Homem",'2009-02-04',"JH@email.com",'1980-10-02',"empresario","rua de cima","Braga","4750-200","equipa cenas");
+insert into Voluntarios (nome, dataAssociacao,contacto,dataNascimento,profissao,rua,localidade,codPostal,nomeEquipa)
+	values("Cookie Monster",'2010-12-21',"CM@email.com",'1969-10-02',"monstro","rua Sésamo","Lisboa","4000-500","equipa cenas");
+insert into Voluntarios (nome, dataAssociacao,contacto,dataNascimento,profissao,rua,localidade,codPostal,nomeEquipa)
+	values("Michael Knight",'2012-12-21',"MK@email.com",'1945-10-02',"justiceiro","rua cenas","Porto","4300-500","equipa cenas");
+insert into Voluntarios (nome, dataAssociacao,contacto,dataNascimento,profissao,rua,localidade,codPostal,nomeEquipa)
+	values("Mário Anónimo",'2011-10-21',"MA@email.com",'1978-10-02',"engenheiro civil","rua rua","Bragança","4330-500","equipa cenas");
+insert into Voluntarios (nome, dataAssociacao,contacto,dataNascimento,profissao,rua,localidade,codPostal,nomeEquipa)
+	values("José Cid",'2003-04-01',"JC@email.com",'1947-06-02',"artista","rua da Cabana Junta á Praia","Lisboa","4000-510","equipa cenas");
 
 
 -- Doadores
