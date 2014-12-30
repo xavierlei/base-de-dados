@@ -1,0 +1,140 @@
+
+ ------------------------- 
+| Schema - Habitat		   |
+| ------------------------ | ---------------- | ------------- | -------- | --- | --- | -------------------------------------------------- |
+| Table                    | Name             | Type          | Not Null | PK  | FK  | Description  						  		      |
+| ------------------------ | ---------------- | ------------- | -------- | --- | --- | -------------------------------------------------- |
+| Familias                 | id               | INT           | Yes	     | Yes | No  | Campo unico que identifica a familia   	  	      |
+|                          | rendimento       | DECIMAL(10,2) | No 	     | No  | No  | Rendimento anual uma familia         		      |
+|                          | rua              | VARCHAR(75)   | No 	     | No  | No  | Morada da familia - campo rua   		  	 	      |
+|                          | localidade       | VARCHAR(75)   | No 	     | No  | No  | Morada da familia - campo localidade        	  	  |   
+|                          | codPostal        | VARCHAR(45)   | No 	     | No  | No  | Morada da familia - campo codigo postal    	      |
+|                          | contacto         | VARCHAR(75)   | No 	     | No  | No  | contacto telefonico 				  		  	      |
+|                          | responsavel      | INT           | No 	     | No  | Yes | chave do elemento responsavel pela familia	  	  |
+|                          | funcionario      | VARCHAR(45)   | Yes 	 | No  | Yes | chave do funcionário responsavel pela familia 	  |
+
+| Elementos                | id               | INT           | Yes	     | Yes | No  | Campo unico que identifica o elemento  	  	      |
+|                          | nome             | VARCHAR(45)   | No	     | No  | No  | Nome completo do elemento 			 		  	  |
+|                          | dataNasc         | DATE          | No 	     | No  | No  | Data de nascimento do elemento 		 	  	      |
+|                          | escolaridade     | VARCHAR(75)   | No 	     | No  | No  | Escolaridade do elemento 					  	  |
+|                          | estadoCivil      | VARCHAR(45)   | No 	     | No  | No  | Estado civil do elemento 					  	  |
+|                          | parentesco       | VARCHAR(45)   | No 	     | No  | No  | Grau de parentesco para com a familia 	   	  	  |
+|                          | ocupacao         | VARCHAR(45)   | No 	     | No  | No  | Ocupação atual do elemento 				  	      |
+|                          | naturalidade     | VARCHAR(45)   | No 	     | No  | No  | Naturalidade do elemento  					      |
+|                          | nacionalidade    | VARCHAR(45)   | No 	     | No  | No  | Nacionalidade do elemento  			      	      |
+|                          | familia          | INT           | Yes 	 | No  | Yes | Chave que identifica a que familia pertence        |
+
+| Candidaturas             | id               | INT           | Yes 	 | Yes | No  | Campo unico que identifica a candidatura   	      |
+|                          | dataAbertura     | DATE          | No 	     | No  | No  | Data de abertura da candidatura 			  	      |
+|                          | dataDecisao      | DATE          | No 	     | No  | No  | Data de decisao da candidatura 			  	      |
+|                          | observacoes      | VARCHAR(75)   | No 	     | No  | No  | Observações relativas a candidarura 		  	      |
+|                          | estado           | VARCHAR(45)   | No 	     | No  | No  | Estado atual da candidatura 				  	      |
+|                          | funcionario      | VARCHAR(45)   | Yes	     | No  | Yes | nome do funcionário responsavel pela candidatura   |
+|                          | familia          | INT           | Yes	     | No  | Yes | chave da familia que efetuou candidatura		      |
+
+| Funcionarios             | username         | VARCHAR(45)   | Yes	     | Yes | No  | Campo unico que identifica o funcionario	 	      |
+|                          | password         | VARCHAR(45)   | No 	     | No  | No  | Password de acesso para o funcionario 			  |
+|                          | nome             | VARCHAR(75)   | No 	     | No  | No  | Nome completo do funcionario 					  |
+|                          | NIF              | VARCHAR(45)   | No 	     | No  | No  | NIF do funcionario 						  	      |
+|                          | rua              | VARCHAR(75)   | No 	     | No  | No  | Morada do funcionário - campo rua 				  |
+|                          | localidade       | VARCHAR(75)   | No 	     | No  | No  | Morada do funcionário - campo localidade 		  |
+|                          | codPostal        | VARCHAR(45)   | No 	     | No  | No  | Morada do funcionário - campo código Postal  	  |
+|                          | tipo             | VARCHAR(45)   | No 	     | No  | No  | Tipo do funcionario 							      |
+
+| Projectos                | id               | INT           | Yes	     | Yes | No  | Campo unico que identifica o projecto 	          |
+|                          | candidatura      | INT           | Yes      | No  | Yes | Chave da candidatura que esta associada ao projeto |
+|                          | dataInicio       | DATE          | No	     | No  | No  | Data de inicio do projecto 						  |
+|                          | dataFim          | DATE          | No	     | No  | No  | Data de fim do projecto 							  |
+|                          | estado           | VARCHAR(45)   | No	     | No  | No  | Estado actual do projeto 				          |
+|                          | descricao        | VARCHAR(75)   | No	     | No  | No  | Descrição relativa ao projeto 			          |
+|                          | orcamento        | DECIMAL(10,2) | No	     | No  | No  | Orçamento previsto para o projeto 		          |
+|                          | funcionario      | VARCHAR(45)   | Yes	     | No  | Yes | chave do funcionário responsavel pela familia      |
+
+| Tarefas                  | id               | INT           | Yes	     | Yes | No  | Campo unico que identifica a tarefa 				  |
+|                          | descricao        | VARCHAR(75)   | No	     | No  | No  | Descrição da tarefa 								  |
+
+| ProjectoTarefas          | dataInicio       | DATE          | No	     | No  | No  | Data de inicio da tarefa 				          |
+|                          | dataFim          | DATE          | No	     | No  | No  | Data de fim da tarefa 					          |
+|                          | projecto         | INT           | Yes	     | Yes | Yes | Campo unico que identifica o projecto em questão	  |
+|                          | tarefas          | INT           | Yes	     | Yes | Yes | Campo unico que identifica a tarefa realizada      |
+
+| Voluntarios              | id               | INT           | Yes	     | Yes | No  | Campo unico que identifica o voluntário 			  |
+|                          | nome             | VARCHAR(75)   | No	     | No  | No  | Nome completo do voluntário 						  |
+|                          | dataAssociacao   | DATE          | No	     | No  | No  | Data que o voluntario se associou  				  |
+|                          | contacto         | VARCHAR(75)   | No	     | No  | No  | Contacto telefonico do voluntário 				  |
+|                          | dataNascimento   | DATE          | No	     | No  | No  | Data de nascimento do voluntário 				  |
+|                          | profissao        | VARCHAR(45)   | No	     | No  | No  | Profissão actual do voluntário 					  |
+|                          | rua              | VARCHAR(75)   | No	     | No  | No  | Morada do voluntário - Campo rua					  |
+|                          | localidade       | VARCHAR(75)   | No	     | No  | No  | Morada do voluntário - Campo localidade			  |
+|                          | codPostal        | VARCHAR(45)   | No	     | No  | No  | Morada do voluntário - Campo codigo postal 		  |
+|                          | nomeEquipa       | VARCHAR(45)   | No	     | No  | No  | Nome actual da equipa a que o vouluntario pertence |
+
+| ProjectoTarefaVoluntario | duracaoHoras     | INT           | No	     | No  | No  | Duração em horas que demorou uma tarefa 			  |
+|                          | dataRealizacao   | DATE          | No	     | No  | No  | Data da realização da tarefa 					  |
+|                          | voluntarios      | INT           | Yes	     | Yes | Yes | Identificador do voluntario que realizou a tarefa  |
+|                          | tarefas          | INT           | Yes	     | Yes | Yes | Campo unico que identifica a tarefa realizada 	  |
+|                          | projecto         | INT           | Yes	     | Yes | Yes | Campo unico que identifica o projecto em questão   |
+
+| Doadores                 | id               | INT           | Yes	     | Yes | No  | Campo unico que identifica o doador 				  |
+|                          | nome             | VARCHAR(75)   | No	     | No  | No  | Nome completo do doador 							  |
+|                          | NIF              | VARCHAR(45)   | No	     | No  | No  | NIF do funcionario 								  |
+|                          | rua              | VARCHAR(75)   | No	     | No  | No  | Morada  do doador - campo rua  					  |
+|                          | Localidade       | VARCHAR(75)   | No	     | No  | No  | Morada  do doador - campo localidade  			  |
+|                          | codPostal        | VARCHAR(45)   | No	     | No  | No  | Morada  do doador - campo código postal       	  |
+|                          | contacto         | VARCHAR(75)   | No	     | No  | No  | Contacto telefonico do doador 					  |
+|                          | dataAssociacao   | DATE          | No	     | No  | No  | Data de Associação do doador 					  |
+|                          | actividade       | VARCHAR(45)   | No	     | No  | No  | Actividade actual do doador 						  |
+|                          | email            | VARCHAR(75)   | No	     | No  | No  | Endereço email do doador 						  |
+|                          | site             | VARCHAR(75)   | No	     | No  | No  | Site do doador  									  |
+|                          | pessoaDeContacto | VARCHAR(75)   | No	     | No  | No  | Pessoa de contacto do doador 					  |
+|                          | voluntario       | INT           | No	     | No  | Yes | Numero de voluntario do doador 					  |
+
+| Doacoes                  | id               | INT           | Yes	     | Yes | No  | Campo unico que identifica a doação         		  |
+|                          | descricao        | VARCHAR(75)   | No	     | No  | No  | Descrição da doação 								  |
+|                          | data             | DATE          | No	     | No  | No  | Data que foi realizada a doação 					  |
+|                          | tipo             | VARCHAR(45)   | No	     | No  | No  | Tipo da doação Material/Monetária 				  |
+|                          | valor            | DECIMAL(10,2) | No	     | No  | No  | Valor monetário da doação 						  |
+|                          | quantidade       | INT           | No	     | No  | No  | Duantidade doada de material 					  |
+|                          | unidade          | VARCHAR(45)   | No	     | No  | No  | Unidade em que é quantificado o material doado 	  |
+|                          | doador           | INT           | Yes	     | No  | Yes | Campo unico que identifica o doador 				  |
+|                          | evento           | INT           | No	     | No  | Yes | Campo unico que identifica o evento 				  |
+|                          | projecto         | INT           | No	     | No  | Yes | Campo unico que identifica o projecto 			  |
+
+| Material                 | id               | INT           | Yes	     | Yes | No  | Campo unico que identifica o material 			  |
+|                          | descricao        | VARCHAR(75)   | No	     | No  | No  | Descrição do material 							  |
+|                          | quantidade       | INT           | No	     | No  | No  | Quantidade de material 							  |
+|                          | unidade          | VARCHAR(45)   | No	     | No  | No  | Unidade em que o material é quantificado 		  |
+
+| ProjectoMaterial         | quantidade       | INT           | No	     | No  | No  | Quantidade gasta de material 					  |
+|                          | material         | INT           | Yes	     | Yes | Yes | Campo unico que identifica o material usado 		  |
+|                          | projecto         | INT           | Yes	     | Yes | Yes | Campo unico que identifica o projeto em questão 	  |
+
+| Eventos                  | id               | INT           | Yes	     | Yes | No  | Campo unico que identifica o evento 				  |
+|                          | data             | DATE          | No	     | No  | No  | Data da realização do evento 					  | 
+|                          | nrParticipantes  | INT           | No	     | No  | No  | Numero de participantes do evento 				  |
+|                          | observacoes      | VARCHAR(75)   | No	     | No  | No  | Observações relativas ao evento 					  |
+|                          | funcionario      | VARCHAR(45)   | No	     | No  | Yes | Identificador do funcionario responsavel 		  |
+|                          | projecto         | INT           | No	     | No  | Yes | Identificador do projeto associado ao evento		  |
+|                          | valorAngariado   | DECIMAL(10,2) | No	     | No  | No  | Valor monetário angariado no evento 				  |
+
+| Anexos                   | id               | INT           | Yes	     | Yes | No  | Campo unico que identifica o anexo 				  |
+|                          | descricao        | VARCHAR(45)   | No	     | No  | No  | Descrição do anexo 								  |
+|                          | ficheiro         | BLOB          | No	     | No  | No  | Ficheiro anexado 								  |
+|                          | condidatura      | INT           | Yes	     | No  | Yes | Identificador da candidatura associada ao anexo 	  |
+
+| Perguntas                | id               | INT           | Yes	     | Yes | No  | Campo unico que identifica a pergunta 			  |
+|                          | descricao        | VARCHAR(256)  | No	     | No  | No  | Pergunta em questão  							  |
+|                          | estado           | VARCHAR(45)   | No	     | No  | No  | Estado Activa/Desativa  							  |
+
+| CandidaturaPerguntas     | resposta         | VARCHAR(256)  | No	     | No  | No  | Resposta da pergunta 							  |
+|                          | candidatura      | INT           | Yes	     | Yes | Yes | Identificador da candiadtura associada 			  |
+|                          | pergunta         | INT           | Yes	     | Yes | Yes | Identificador da pergunta associada 				  |
+
+| Equipas                  | id               | INT           | Yes	     | Yes | No  | Campo unico que identifica a equipa  			  |
+|                          | nome             | VARCHAR(45)   | No	     | No  | No  | Nome da equipa         							  |
+
+| VoluntariosEquipas       | voluntario       | INT           | Yes	     | Yes | Yes | Identificador do voluntário   					  |
+|                          | equipa           | INT           | Yes	     | Yes | Yes | Identificador da equipa         					  |
+| ------------------------ | ---------------- | ------------- | -------- | --- | --- | -------------------------------------------------- |
+
+
