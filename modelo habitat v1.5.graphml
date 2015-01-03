@@ -493,7 +493,7 @@
       <data key="d6">
         <y:GenericNode configuration="com.yworks.entityRelationship.attribute">
           <y:Geometry height="40.0" width="80.0" x="893.6300492753533" y="543.3369403098944"/>
-          <y:Fill color="#99CCFF" color2="#B7C9E3" transparent="false"/>
+          <y:Fill color="#E8ECF7" color2="#B7C9E3" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="custom" textColor="#000000" underlinedText="true" visible="true" width="15.853515625" x="32.0732421875" y="10.93359375">id<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
@@ -512,7 +512,7 @@
       <data key="d6">
         <y:GenericNode configuration="com.yworks.entityRelationship.attribute">
           <y:Geometry height="40.0" width="80.0" x="991.3564197114414" y="549.8400626612715"/>
-          <y:Fill color="#99CCFF" color2="#B7C9E3" transparent="false"/>
+          <y:Fill color="#E8ECF7" color2="#B7C9E3" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="custom" textColor="#000000" visible="true" width="36.70703125" x="21.646484375000114" y="10.93359375">nome<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
@@ -1085,7 +1085,7 @@
       <data key="d6">
         <y:GenericNode configuration="com.yworks.entityRelationship.small_entity">
           <y:Geometry height="40.0" width="80.0" x="974.5545122993882" y="491.57294637010244"/>
-          <y:Fill color="#99CCFF" color2="#B7C9E3" transparent="false"/>
+          <y:Fill color="#E8ECF7" color2="#B7C9E3" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="custom" textColor="#000000" visible="true" width="49.26953125" x="15.365234375" y="10.933593750000057">Equipas<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
@@ -1389,7 +1389,7 @@
       <data key="d6">
         <y:GenericNode configuration="com.yworks.entityRelationship.relationship">
           <y:Geometry height="56.0" width="90.0" x="968.413042479356" y="380.4224041441147"/>
-          <y:Fill color="#99CCFF" color2="#B7C9E3" transparent="false"/>
+          <y:Fill color="#E8ECF7" color2="#B7C9E3" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="custom" textColor="#000000" visible="true" width="54.6015625" x="17.69921875" y="18.93359375">pertence<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
@@ -3654,7 +3654,6 @@
       </data>
     </edge>
     <edge id="e126" source="n122" target="n6">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -3667,7 +3666,6 @@
       </data>
     </edge>
     <edge id="e127" source="n122" target="n6">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
